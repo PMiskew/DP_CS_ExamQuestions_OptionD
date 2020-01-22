@@ -45,6 +45,8 @@ public class Rectangle {
 	 * 			static methods call access static fields
 	 * 		-	GENERAL RULE: if a method only uses static fields
 	 * 			make the method static. 
+	 * 		- 	GENERAL RULE: if you don't need instance fields
+	 * 			make the method static. 
 	 */
 	
 	public static int getRectangleCount() { return rectangleCount; }
@@ -61,6 +63,10 @@ public class Rectangle {
 	 */
 	public static Rectangle copyLarger(Rectangle o1, Rectangle o2) {
 		
+		
+		if (o1 == null || o2 == null) {
+			return null;
+		}
 		//Why can I access the fields of o1 and o2 inside this static method?
 		//
 		//	-	They are passed objects not implied objects
@@ -70,7 +76,13 @@ public class Rectangle {
 		//
 		//	- 	There is no error because of the SCOPE
 		
+		
 		if (o1.getArea() > o2.getArea()) {
+			
+			
+			//VERY COMMON MISTAKE
+			//Rectangle result = o1;
+			//return result;
 			
 			Rectangle result = new Rectangle(o1.side1,o1.side2);
 			return result;
@@ -95,5 +107,24 @@ public class Rectangle {
 		return "Side1: "+side1+"\nSide2: "+side2;
 	}
 	
+	/**
+	 * The equal method checks if two rectangles are equal based
+	 * on the lengths of sides. This method checks both orientations  
+	 * @param other
+	 * @return
+	 */
+	public boolean equal(Rectangle other) {
+		
+		if (other == null) {
+			return false;
+		}
+		
+		if (this.side1 == other.side1 && this.side2 == other.side2)
+			return true;
+		if (this.side1 == other.side2 && this.side2 == other.side1)
+			return true;
+		return false;
+		
+	}
 	
 }
