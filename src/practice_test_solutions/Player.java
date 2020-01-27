@@ -60,7 +60,8 @@ public class Player {
 		stats  = new int[3];
 	}
 	
-	public Player(int p, int h, int d) {
+	public Player(int p, int h, int d, String n) {
+		name = n;
 		//You need the below line or you will get a null reference error
 		stats = new int[3];
 		stats[0] = p;
