@@ -7,16 +7,15 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Display extends JFrame{
+public class Display extends JFrame implements MouseListener{
 
 	private JPanel panel = new JPanel();
 	private ArrayList<Rectangle> rects = new ArrayList<Rectangle>();
 	private static int width = 50;
 	private static int height = 50;
-	private MouseListener ml = new MouseListener() {
-
-		@Override
-		public void mouseClicked(MouseEvent e) {
+	
+	
+	public void mouseClicked(MouseEvent e) {
 			// TODO Auto-generated method stub
 		
 			System.out.println(e.getX()+","+e.getY()); //Just to test it is working
@@ -63,13 +62,13 @@ public class Display extends JFrame{
 		}
 		
 		
-	};
+
 	public Display() {
 		
 		this.setTitle("Display");
 		this.setSize(500,400);
 		this.add(panel);
-		panel.addMouseListener(ml);
+		panel.addMouseListener(this);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
