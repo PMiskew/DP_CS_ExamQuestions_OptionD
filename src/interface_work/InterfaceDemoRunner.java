@@ -70,9 +70,20 @@ public class InterfaceDemoRunner {
 		flyable.add(new Plane());
 		
 		
+
+		mystery(4);
 		
 		
 		
+	}
+	
+	public static void mystery(int n) {
+		
+		if ((n > 0) && (n%2 == 0)) {
+			mystery(n - 2);
+		}
+		System.out.println(n);
+
 	}
 	
 
