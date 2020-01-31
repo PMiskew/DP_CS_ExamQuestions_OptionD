@@ -84,15 +84,15 @@ public class BinarySearchExample {
 		 * 
 		 * BinarySearchRecursive(arr,0,8,4) shortened to BSR(low,high) = BSR(0,8)
 		 *
-		 * BSR(0,8) = BSR(0,3) 
-		 * BSR(0,3) = BSR(2,3)
+		 * BSR(0,8) = BSR(0,3) = 4
+		 * BSR(0,3) = BSR(2,3) = 4
 		 * BSR(2,3) = 2 (END) --> arr[2] == 4
 		 *
 		 * BinarySearchRecursive(arr,0,8,6) shortened to BSR(low,high) = BSR(0,8)
 		 *
-		 * BSR(0,8) = BSR(5,8)
-		 * BSR(5,8) = BSR(5,5)
-		 * BSR(5,5) = BSR(5,4)
+		 * BSR(0,8) = BSR(5,8) = -1 
+		 * BSR(5,8) = BSR(5,5) = -1 
+		 * BSR(5,5) = BSR(5,4) = -1
 		 * BSR(5,4) = -1 --> low > high return -1 
 		 *
 		 *
@@ -101,11 +101,32 @@ public class BinarySearchExample {
 		//Question: What is a binary search?
 		/*
 		 * A binary search is a search that can only be applied to 
-		 * SORTED DATA.  Unlike a linear search that progresses from 
+		 * SORTED DATA.  Unlike a linear search that progresses
 		 * through the data in sequence a binary search starts by checking
-		 * the middle value.  It then makes a decision based ont the 
+		 * the middle value.  It then makes a decision based on the 
 		 * size of the middle value relative to the value being searched
-		 * for. 
+		 * for.
+		 * 
+		 * low = l
+		 * high = h
+		 * middle = m
+		 * target value = 3
+		 * 
+		 * first check  3 < data[4]
+		 * 			l           m           h
+		 * index =  0  1  2  3  4  5  6  7  8
+		 *  data = [1, 3, 4, 4, 5, 7, 8, 8, 9]
+		 *  
+		 * second check 3 > data[1]
+		 * 			l  m     h
+		 * index =  0  1  2  3  4  5  6  7  8
+		 *  data = [1, 3, 4, 4, 5, 7, 8, 8, 9]
+		 *  
+		 * third check  3 == data[1] DONE
+		 * 			      l  h
+		 * 				  m
+		 * index =  0  1  2  3  4  5  6  7  8
+		 *  data = [1, 3, 4, 4, 5, 7, 8, 8, 9]
 		 *
 		 */
 		
