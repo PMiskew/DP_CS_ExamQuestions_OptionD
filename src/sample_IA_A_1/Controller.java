@@ -9,17 +9,34 @@ public class Controller {
 	private ArrayList<String> users = new ArrayList<String>();
 	private ArrayList<char[]> passwords = new ArrayList<char[]>();
 	
+	/**
+	 * Constructor 
+	 */
 	public Controller() {
+		
+		//adds some sample users
+		//NOTE: REALLY 
+		//		MINIMUM - PULL FROM FILE
+		//		IDEALLY - PULL FROM DATABASE (FIREBASE)
+		//		EXPLORE - PULL FROM GOOGLE SHEETS
 		
 		users.add("user 1");
 		users.add("user 2");
 		
+		//Add some sample passwords
 		char[] pwd1 = {'p','a','s','s','w','o','r','d','1'};
 		char[] pwd2 = {'p','a','s','s','w','o','r','d','1'};
 		passwords.add(pwd1);
 		passwords.add(pwd2);
 		
+		//TALKING POINT: PARALLEL ARRAY STRUTURE
 		
+		// - passes a reference to teh controller to login
+		//		- KEY IDEA: "this" means the implied objects reference
+		//		- Login reference and a login object. 
+		//			- REFERENCE = new OBJECT
+		//			   GENERAL --> SPECIFIC
+		//		- The object is called l
 		Login l = new Login(this);
 	}
 	
@@ -45,6 +62,10 @@ public class Controller {
 		System.out.println("2. Practice setting up a class structure");
 		System.out.println("3. Practice using pre-existing classes");
 		System.out.println("4. Set up a basic GUI");
+		
+		//This starts our program.  Everything gets built and started
+		//in the controller constructor.  The program then waits for 
+		//something to happen. 
 		Controller c = new Controller();
 	}
 }

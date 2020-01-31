@@ -29,10 +29,42 @@ public class Login {
 	
 	private Controller control;
 	
+	/*
+	 * This is how we create listeners
+	 * ActionListeners are teh same ideas as KeyListeners or MouseListeners
+	 * They are examples of INTERFACES. 
+	 * IB does not require you to know about interfaces. 
+	 * Interfaces are a great opportunity to show your knowledge in part C of IA. 
+	 * 
+	 * Listener is a function that is executed when something happens. 
+	 * 
+	 * If you want to learn more about interfaces please set up a meeting and we 
+	 * can go over it.  You need to first explore ABSTRACT CLASSES. Please see
+	 * interface_work project. 
+	 * 
+	 * All you need to know
+	 * 	- We are created event driven programs.  This means that a function is run when an "EVENT" happens
+	 *  - There are two steps
+	 *  		- Create the function, or sometimes called the "listener"
+	 *  		- Bind the function to an element. 
+	 * 
+	 */
 	private ActionListener loginLSN = new ActionListener() {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			//TELL ME FOUR THINGS ABOUT THE LISTENER CODE:
+			/*
+			 * 	1. actionPerformed returns void
+			 *  2. actionPerfored takes an ActionEvent object as a parameter
+			 *  		ActionEvent objects are how to check which button was clicked. 
+			 *  		You can use the object e to get all sorts of information about
+			 *  		who called the listener.  
+			 * 
+			 * 
+			 * 
+			 */
+			
 			// TODO Auto-generated method stub
 			String u = loginENT.getText();
 			char[] pwd = pwordENT.getPassword();
@@ -53,16 +85,29 @@ public class Login {
 		
 	};
 	
+	/*
+	 * Four Facts About Constructor Code:
+	 * 
+	 * 	- it addes elements to panel using the INSTANCE method add
+	 *  - the constructor takes a controll reference, sets control to the passed controller reference. 
+	 *  - binds loginLSN to loginBTN using the addActionListener INSTANCE METHOD
+	 *  - JFrame.EXIT_ON_CLOSE is accessing a STATIC CONSTANT from the JFrame 
+	 * 
+	 * 
+	 */
+	
 	public Login(Controller c) {
 		
+		
+		//This opens a line of communication to the controllor that acts as a conduite to the data. 
 		control = c;
 		
-		//configure elements
+		//configure elements - Makes them pretty and places around
 		loginENT.setColumns(20);
 		pwordENT.setColumns(20);
 		loginBTN.addActionListener(loginLSN);
 		
-		//setup panel
+		//setup panel - adds all the widgets to the panel
 		panel.add(loginL);
 		panel.add(loginENT);
 		panel.add(pwordL);
@@ -72,10 +117,10 @@ public class Login {
 		panel.add(resultL);
 		
 		//set up frame
-		frame.add(panel);
-		frame.pack();
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);  //adds panel to frame
+		frame.pack(); // quickly organizes them (LOTS TO PLAY WITH HERE)
+		frame.setVisible(true); //displays the frame
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //shut down program 
 		
 		
 	}
