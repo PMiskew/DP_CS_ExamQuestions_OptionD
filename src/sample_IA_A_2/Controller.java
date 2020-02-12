@@ -23,6 +23,28 @@ public class Controller {
 		Login l = new Login(this);
 	}
 	
+	
+	/**
+	 * STAGE 2:
+	 * 
+	 */
+	public void addUser(String u, char[] pwd) {
+		
+		for (int i = 0; i < users.size(); i = i + 1) {
+			
+			if (users.get(i).compareTo(u) < 0) {
+				users.add(u,i);
+				passwords.add(pwd,i);
+			}
+		}
+	}
+	
+	/**
+	 * STAGE 1 
+	 * @param u
+	 * @param p
+	 * @return
+	 */
 	public int checkpasswordNONALPHA(String u, char[] p) {
 		
 		for (int i = 0; i < users.size(); i = i + 1) {
@@ -43,6 +65,7 @@ public class Controller {
 		System.out.println("Goals");
 		System.out.println("1. Talk about benefits of ordered data");
 		System.out.println("2. Show and example of a binary search");
+		System.out.println("3. Identifying button "
 		Controller c = new Controller();
 	}
 }
