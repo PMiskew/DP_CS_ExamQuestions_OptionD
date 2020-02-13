@@ -14,6 +14,7 @@ public class $PM {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/*
 		// TODO Auto-generated method stub
 		//Variables to use
 		
@@ -51,6 +52,13 @@ public class $PM {
 			System.out.println();
 		}
 		
+		//*/
+		
+		int[] arr = {1,5,7,3,5,7,8,5,3,5,7};
+		//bubbleSort(arr);
+		selectionSort(arr);
+		System.out.println(Arrays.toString(arr));
+		
 	}
 	/**
 	 * 
@@ -68,9 +76,64 @@ public class $PM {
 		
 	}
 	
-	
+
 	
 /***********************************************MAIN FUNCTION*******************************/
+	/**
+	 * This is pulled from the pseudocode found on wikipedia. 
+	 * @param arr
+	 */
+	public static void selectionSort(int[] a) {
+		
+		/* a[0] to a[aLength-1] is the array to sort */
+		int i,j;
+		int aLength = a.length; // initialize to a's length
+
+		/* advance the position through the entire array */
+		/*   (could do i < aLength-1 because single element is also min element) */
+		for (i = 0; i < aLength-1; i++) {
+		    /* find the min element in the unsorted a[i .. aLength-1] */
+
+		    /* assume the min is the first element */
+		    int jMin = i;
+		    /* test against elements after i to find the smallest */
+		    for (j = i+1; j < aLength; j++)
+		    {
+		        /* if this element is less, then it is the new minimum */
+		        if (a[j] < a[jMin])
+		        {
+		            /* found new minimum; remember its index */
+		            jMin = j;
+		        }
+		    }
+
+		    if (jMin != i) 
+		    {
+		    	int temp = a[i];
+		    	a[i] = a[jMin];
+		    	a[jMin] = temp;
+		    }
+		}
+	}
+	
+	public static void bubbleSort(int[] arr) {
+		
+		for (int i = 0; i < arr.length; i = i + 1) {
+			
+			for (int j = 0; j < arr.length - i - 1; j = j + 1) {
+				
+				if (arr[j] > arr[j + 1]) {
+					//Swaping Elements
+					int temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+		}
+		
+		
+	}
+	
 	/**
 	 * 
 	 * @param n

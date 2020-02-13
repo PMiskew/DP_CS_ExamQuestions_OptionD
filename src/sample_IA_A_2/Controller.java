@@ -11,13 +11,27 @@ public class Controller {
 	
 	public Controller() {
 		
+		//For this section to work the users must be entered
+		//alphabetically
 		users.add("user 1");
 		users.add("user 2");
-		
+		users.add("user 3");
+		users.add("user 4");
+		users.add("user 5");
+		users.add("user 6");
 		char[] pwd1 = {'p','a','s','s','w','o','r','d','1'};
 		char[] pwd2 = {'p','a','s','s','w','o','r','d','1'};
+		char[] pwd3 = {'p','a','s','s','w','o','r','d','1'};
+		char[] pwd4 = {'p','a','s','s','w','o','r','d','1'};
+		char[] pwd5 = {'p','a','s','s','w','o','r','d','1'};
+		char[] pwd6 = {'p','a','s','s','w','o','r','d','1'};
+			
 		passwords.add(pwd1);
 		passwords.add(pwd2);
+		passwords.add(pwd3);
+		passwords.add(pwd4);
+		passwords.add(pwd5);
+		passwords.add(pwd6);
 		
 		
 		Login l = new Login(this);
@@ -33,8 +47,8 @@ public class Controller {
 		for (int i = 0; i < users.size(); i = i + 1) {
 			
 			if (users.get(i).compareTo(u) < 0) {
-				users.add(u,i);
-				passwords.add(pwd,i);
+				users.add(i,u);
+				passwords.add(i,pwd);
 			}
 		}
 	}
@@ -65,7 +79,8 @@ public class Controller {
 		System.out.println("Goals");
 		System.out.println("1. Talk about benefits of ordered data");
 		System.out.println("2. Show and example of a binary search");
-		System.out.println("3. Identifying button "
+		System.out.println("3. Identifying button that is clicked");
+		System.out.println("4. Adding new user alphabetically");
 		Controller c = new Controller();
 	}
 }
