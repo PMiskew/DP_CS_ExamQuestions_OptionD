@@ -8,7 +8,7 @@ public class Client {
 	private Dates leave;
 	private Room bedroom;
 	
-	public Client(int id, String c, Dates datIn, Dates dateOut, Room r) {
+	public Client(int id, String c, Dates dateIn, Dates dateOut, Room r) {
 		setCustomerID(id);
 		setName(c);
 		setArrive(dateIn);
@@ -21,7 +21,7 @@ public class Client {
 	public void setName(String c) { name = c; }
 	public void setArrive (Dates dateIn) { arrive = dateIn; }
 	public void setLeave (Dates dateOut) { leave = dateOut; }
-	public void setBedoom(Room r) { bedroom = r; }
+	public void setBedroom(Room r) { bedroom = r; }
 	
 	public int getCustomerID() { return customerID; }
 	public String getName() { return name; }
