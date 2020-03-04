@@ -9,6 +9,7 @@ public class Client {
 	private Room bedroom;
 	
 	public Client(int id, String c, Dates dateIn, Dates dateOut, Room r) {
+		
 		setCustomerID(id);
 		setName(c);
 		setArrive(dateIn);
@@ -31,7 +32,17 @@ public class Client {
 	
 	public void bill() {
 		
+	
+		double bill = bedroom.getPrice();
+		String result = "Room: " + bedroom.getRoomNumber();
+		result = result + "\n"+arrive.getYear()+"/"+arrive.getMonth()+"/"+arrive.getDay();
+		result = result + "\n"+leave.getYear()+"/"+leave.getMonth()+"/"+leave.getDay();
+		result = result + Dates.StayDays(arrive, leave);
+		result = result + bedroom.getPrice() * Dates.StayDays(arrive, leave);
+		System.out.println(result);
 		
 	}
+	
+	
 	
 }
