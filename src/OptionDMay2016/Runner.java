@@ -36,12 +36,19 @@ public class Runner {
 		ArrayList<Integer> freeRooms = findRooms(allRooms);
 		System.out.println(freeRooms);
 		
-		//May 2016 15 b)
-		Group[] group = new Group[15];
+		 /* May 2016 15b)
+		 * 
+		 * 1) 	Create an instance of group passing the String
+		 * 		"Happy Travellers" and the integer 15. 
+		 *
+		 * 2) 	Run the method findRooms to get the integer list of
+		 * 		free rooms. 
+		 * 3) 	Take the first 15 rooms in the list and set their 
+		 * 		empty to false.
+		 * 
+		 * 
+		 */
 		
-		for (int i = 0; i < group.length; i = i + 1) {
-			group[i] = new Group("Happy Travellers",8);
-		}
 		
 		
 		

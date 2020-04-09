@@ -1,0 +1,14 @@
+!SESSION 2020-04-08 21:23:38.130 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/pmiskew/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/pmiskew/eclipse-workspaceDPCSYear11/DP_CS_OPTIOND_SOLUTIONS -product org.eclipse.epp.package.java.product -keyring /Users/pmiskew/.eclipse_keyring
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-04-08 21:24:06.625
+!MESSAGE An internal error occurred during: "Check server availability".
+!STACK 0
+java.lang.NullPointerException
+	at com.yattasolutions.platform.marketplace.client.account.CheckServerAvailabilityJob.run(CheckServerAvailabilityJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

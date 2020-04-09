@@ -5,6 +5,7 @@ public class Group {
 	private String name; // name of group
 	private int number; //number of rooms allocated to the group
 	
+	
 	//Change from the exam:
 	// I have moved this field to the correct location and have
 	// encapsulated.  In the exam this array is shown in a location
@@ -18,6 +19,8 @@ public class Group {
 		this.name = name; 
 		this.number = number; 
 		gRooms = new int[number];
+		gr = g;
+		
 	}
 	
 	public String getName() { return name; }
