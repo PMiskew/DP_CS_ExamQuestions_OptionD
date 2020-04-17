@@ -6,9 +6,12 @@ import java.util.Arrays;
 //SAMPLE IA_A
 public class Controller {
 
+	//Two fields/attributes
+	//Always encapsulate your fields
 	private ArrayList<String> users = new ArrayList<String>();
 	private ArrayList<char[]> passwords = new ArrayList<char[]>();
 	
+	private ArrayList<User> userslist = new ArrayList<User>();
 	/**
 	 * Constructor 
 	 */
@@ -17,8 +20,11 @@ public class Controller {
 		//adds some sample users
 		//NOTE: REALLY 
 		//		MINIMUM - PULL FROM FILE
-		//		IDEALLY - PULL FROM DATABASE (FIREBASE)
+		//			CODE HERE TO LOAD FROM FILE
+		//		IDEALLY - PULL FROM DATABASE (FIREBASE, ORACLE)
+		//			
 		//		EXPLORE - PULL FROM GOOGLE SHEETS
+		//			
 		
 		users.add("user 1");
 		users.add("user 2");
@@ -36,7 +42,7 @@ public class Controller {
 		//		- Login reference and a login object. 
 		//			- REFERENCE = new OBJECT
 		//			   GENERAL --> SPECIFIC
-		//		- The object is called l
+		//		- this is a reference to the object that we are currently working in. 
 		Login l = new Login(this);
 	}
 	
@@ -60,6 +66,11 @@ public class Controller {
 		System.out.println("Goals");
 		System.out.println("1. Set up a Model-View-Control Structure");
 		System.out.println("2. Practice setting up a class structure");
+		System.out.println("Class Structure");
+		System.out.println("Part 1: Attribites/Fields");
+		System.out.println("Part 2: Constructors ");
+		System.out.println("Part 3: Behaviours/Methods");
+		
 		System.out.println("3. Practice using pre-existing classes");
 		System.out.println("4. Set up a basic GUI");
 		

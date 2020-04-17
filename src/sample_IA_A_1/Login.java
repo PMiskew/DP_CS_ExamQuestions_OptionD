@@ -14,11 +14,23 @@ import javax.swing.JTextField;
 //SAMPLE IA_A
 public class Login {
 
+	/*
+	 * When building a basic GUI we have to do three things
+	 * 	1. Construct the object to put on the screen
+	 * 	2. Configure it - Set attributes, attach listeners
+	 * 	3. Place it on the screen. 
+	 * 
+	 * 	I am doing this manually but there are lots of software packages out there
+	 *  that will actually allow to draw your interface and generate your code. 
+	 *  
+	 * 
+	 */
 	private JFrame frame = new JFrame("Login");
 	private JPanel panel = new JPanel();
 	
 	private JLabel loginL = new JLabel("Login");
 	private JLabel pwordL = new JLabel("Password");
+	
 	private JLabel resultL = new JLabel("");
 	
 	private JTextField loginENT = new JTextField();
