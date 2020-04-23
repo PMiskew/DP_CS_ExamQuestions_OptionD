@@ -1,4 +1,4 @@
-package sample_IA_A_2;
+package sample_IA_A_ERRORBRANCH;
 
 import java.util.Arrays;
 

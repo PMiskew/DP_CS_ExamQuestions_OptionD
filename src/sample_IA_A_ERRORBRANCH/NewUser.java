@@ -1,4 +1,4 @@
-package sample_IA_A_2;
+package sample_IA_A_ERRORBRANCH;
 //In this stage we just build this window, we don't actually link 
 //it into our program.  That will happen in stage 3.  The goal here 
 //is to prototype and get the window up and running. 
