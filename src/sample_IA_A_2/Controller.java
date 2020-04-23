@@ -1,4 +1,4 @@
-package sample_IA_A_1;
+package sample_IA_A_2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
