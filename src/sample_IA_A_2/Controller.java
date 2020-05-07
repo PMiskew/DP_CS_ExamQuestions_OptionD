@@ -32,6 +32,7 @@ public class Controller {
 	 * @param u
 	 * @param p
 	 * @return
+	 * 
 	 */
 	public int checkpasswordNONALPHA(String u, char[] p) {
 		

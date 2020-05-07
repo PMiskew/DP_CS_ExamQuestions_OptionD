@@ -39,6 +39,8 @@ public class Login {
 	private JButton loginBTN = new JButton("Login");
 	private JButton newUserBTN = new JButton ("New User");
 	
+
+	
 	private Controller control;
 	
 	/*

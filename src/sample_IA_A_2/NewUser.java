@@ -95,7 +95,7 @@ public class NewUser {
 		frame.add(panel);
 		
 		frame.pack();
-		
+		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
 		
