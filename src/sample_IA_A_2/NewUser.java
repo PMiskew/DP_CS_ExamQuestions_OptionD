@@ -95,6 +95,18 @@ public class NewUser {
 		frame.add(panel);
 		
 		frame.pack();
+		/*
+		 * 
+		 * setDefaultCloseOperation is an instance method since it invoked with an instance
+		 * setDefaultCloseOperation takes a single parameter - ??
+		 * Look in the documentation for JFrame
+		 * EXIT_ON_CLOSE is an int value
+		 * It is static field since it is being access by the name of the class
+		 * It is a constant value since it is all caps. 
+		 * 
+		 * We had this line for tests, but want to remove it for our actual program
+		 * because when I close this window I don't want everything to close
+		 */
 		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		

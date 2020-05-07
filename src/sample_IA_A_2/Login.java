@@ -39,7 +39,7 @@ public class Login {
 	private JButton loginBTN = new JButton("Login");
 	private JButton newUserBTN = new JButton ("New User");
 	
-
+	
 	
 	private Controller control;
 	
@@ -99,6 +99,17 @@ public class Login {
 		
 	};
 	
+	public ActionListener newUserLSN = new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			NewUser newUserWindow = new NewUser();
+		}
+		
+		
+	};
+	
 	/*
 	 * Four Facts About Constructor Code:
 	 * 
@@ -120,7 +131,7 @@ public class Login {
 		loginENT.setColumns(20);
 		pwordENT.setColumns(20);
 		loginBTN.addActionListener(loginLSN);
-		
+		newUserBTN.addActionListener(newUserLSN);
 		//setup panel - adds all the widgets to the panel
 		panel.add(loginL);
 		panel.add(loginENT);
