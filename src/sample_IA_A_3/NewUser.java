@@ -1,4 +1,4 @@
-package sample_IA_A_2;
+package sample_IA_A_3;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -36,6 +36,9 @@ public class NewUser {
 	
 	private JButton submit = new JButton("Submit");
 	
+	//provides a path back to the controllor
+	private Controller control;
+	
 	/*
 	 * An action listener is an interface.  An inteface only
 	 * has abstract classes.  This means you have to write your
@@ -48,23 +51,6 @@ public class NewUser {
 			// TODO Auto-generated method stub
 			//CODING BAT PROBLEM: GIVEN TWO STRINGS DOES str1 == str2
 			System.out.println("BUTTON PRESSED");
-			
-			//I want to build a new user
-			String name = nameField.getText();
-			//Error checking to ensure name is valid: If user name is
-			//<first initial><Last name>, this means there must two words
-			//separated by a space. 
-		
-			String password1 = pwField.getText();
-			
-			
-			
-			System.out.println(name);
-			System.out.println(password1);
-			
-			
-			frame.dispose();
-			
 		}
 		
 		
