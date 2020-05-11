@@ -36,6 +36,8 @@ public class NewUser {
 	
 	private JButton submit = new JButton("Submit");
 	
+	private Controller control;
+	
 	/*
 	 * An action listener is an interface.  An inteface only
 	 * has abstract classes.  This means you have to write your
@@ -56,13 +58,19 @@ public class NewUser {
 			//separated by a space. 
 		
 			String password1 = pwField.getText();
+			String password2 = pwcField.getText();
+			//Password error checking
 			
+			//Convert password1 to array of char
+			char[] pw = {'a','b','c'};
 			
+			User nw = new User(name, 100, "Mr. Miskew", pw);
+			//HOW DO NewUser Class get access to the controller
 			
 			System.out.println(name);
 			System.out.println(password1);
 			
-			
+			System.out.println(control);
 			frame.dispose();
 			
 		}
@@ -74,8 +82,10 @@ public class NewUser {
 	 * Never specify return type
 	 * Same name as class
 	 */
-	public NewUser() {
+	public NewUser(Controller c) {
 		
+		control = c;
+		System.out.println("CONSTRUCTOR: "+c);
 		/*
 		 * 
 		 *    Frame --> XXXXXXXXXXXX
@@ -135,7 +145,7 @@ public class NewUser {
 	public static void main(String[] args) {
 		
 		//Testing to make it sure it looks right.
-		NewUser window = new NewUser();
+		//NewUser window = new NewUser();
 		
 	}
 }
