@@ -4,6 +4,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -56,21 +57,32 @@ public class NewUser {
 			//Error checking to ensure name is valid: If user name is
 			//<first initial><Last name>, this means there must two words
 			//separated by a space. 
+			//GREAT PLACE FOR B/C
 		
 			String password1 = pwField.getText();
 			String password2 = pwcField.getText();
-			//Password error checking
+			//Password error checking - security checking - GREAT PLACE FOR B/C
 			
 			//Convert password1 to array of char
 			char[] pw = {'a','b','c'};
 			
-			User nw = new User(name, 100, "Mr. Miskew", pw);
+		
+			
+			User nu = new User(name, 100, "Mr. Miskew", pw);
 			//HOW DO NewUser Class get access to the controller
 			
 			System.out.println(name);
 			System.out.println(password1);
 			
 			System.out.println(control);
+			
+			//Approach 1:
+			//control.addUser(nu);
+			
+			//Approach 2:
+			ArrayList<User> list = control.getUserList();
+			list.add(nu);
+			
 			frame.dispose();
 			
 		}

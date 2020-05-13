@@ -62,7 +62,28 @@ public class Controller {
 		return 2; //username is invalid
 	}
 	
+	//Two ways to add a user
+	/*
+	 * This method has a user passed into it and the user added
+	 */
+	public void addUser(User u) {
+		userslist.add(u);
+		System.out.println(userslist);
+		
+	}
 	
+	/*
+	 * This method passes the reference to the list and the user is added
+	 * externally. 
+	 */
+	public ArrayList<User> getUserList() {
+		return userslist;
+	}
+	
+	
+	public void inController() {
+		System.out.println("IN CONTROLLER");
+	}
 	
 	
 	public static void main(String[] args) {
