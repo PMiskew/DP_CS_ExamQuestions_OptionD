@@ -1,3 +1,14 @@
+/*
+ * 
+ * Comment in our development:  This was developed to help students understand
+ * how to connect the login screen adn go over proper terminology.  Note, there
+ * are some obviuos flaws witht this in context to the User class.  
+ * 
+ * Exercise:  Fix this up so that it is better set up for the 
+ * 
+ * 
+ * 
+ */
 package sample_IA_A_2;
 
 import java.awt.GridBagConstraints;

@@ -104,7 +104,8 @@ public class Login {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			NewUser newUserWindow = new NewUser();
+			System.out.println(control);
+			NewUser newUserWindow = new NewUser(control);
 		}
 		
 		
@@ -126,7 +127,7 @@ public class Login {
 		
 		//This opens a line of communication to the controllor that acts as a conduite to the data. 
 		control = c;
-		
+		System.out.println(control);
 		//configure elements - Makes them pretty and places around
 		loginENT.setColumns(20);
 		pwordENT.setColumns(20);

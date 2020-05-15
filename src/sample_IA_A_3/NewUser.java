@@ -1,9 +1,21 @@
+/*
+ * 
+ * Comment in our development:  This was developed to help students understand
+ * how to connect the login screen adn go over proper terminology.  Note, there
+ * are some obviuos flaws witht this in context to the User class.  
+ * 
+ * Exercise:  Fix this up so that it is better set up for the 
+ * 
+ * 
+ * 
+ */
 package sample_IA_A_3;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -36,7 +48,6 @@ public class NewUser {
 	
 	private JButton submit = new JButton("Submit");
 	
-	//provides a path back to the controllor
 	private Controller control;
 	
 	/*
@@ -51,6 +62,40 @@ public class NewUser {
 			// TODO Auto-generated method stub
 			//CODING BAT PROBLEM: GIVEN TWO STRINGS DOES str1 == str2
 			System.out.println("BUTTON PRESSED");
+			
+			//I want to build a new user
+			String name = nameField.getText();
+			//Error checking to ensure name is valid: If user name is
+			//<first initial><Last name>, this means there must two words
+			//separated by a space. 
+			//GREAT PLACE FOR B/C
+		
+			String password1 = pwField.getText();
+			String password2 = pwcField.getText();
+			//Password error checking - security checking - GREAT PLACE FOR B/C
+			
+			//Convert password1 to array of char
+			char[] pw = {'a','b','c'};
+			
+		
+			
+			User nu = new User(name, 100, "Mr. Miskew", pw);
+			//HOW DO NewUser Class get access to the controller
+			
+			System.out.println(name);
+			System.out.println(password1);
+			
+			System.out.println(control);
+			
+			//Approach 1:
+			//control.addUser(nu);
+			
+			//Approach 2:
+			ArrayList<User> list = control.getUserList();
+			list.add(nu);
+			
+			frame.dispose();
+			
 		}
 		
 		
@@ -60,8 +105,10 @@ public class NewUser {
 	 * Never specify return type
 	 * Same name as class
 	 */
-	public NewUser() {
+	public NewUser(Controller c) {
 		
+		control = c;
+		System.out.println("CONSTRUCTOR: "+c);
 		/*
 		 * 
 		 *    Frame --> XXXXXXXXXXXX
@@ -121,7 +168,7 @@ public class NewUser {
 	public static void main(String[] args) {
 		
 		//Testing to make it sure it looks right.
-		NewUser window = new NewUser();
+		//NewUser window = new NewUser();
 		
 	}
 }
